@@ -1,5 +1,5 @@
 import string
-abjad = string.ascii_letters  # Menggunakan huruf alfabet saja
+abjad = string.ascii_letters  
 
 def enkrip(pesan):
     global abjad
@@ -8,7 +8,7 @@ def enkrip(pesan):
     for i in pesan:
         if i in abjad:
             k = abjad.find(i)
-            k = (k + key) % 26  # Menggunakan modulus 26
+            k = (k + key) % 26  
             cipher = cipher + abjad[k]
         else:
             cipher = cipher + i
@@ -21,7 +21,7 @@ def dekrip(cipher):
     for i in cipher:
         if i in abjad:
             k = abjad.find(i)
-            k = (k - key) % 26  # Menggunakan modulus 26
+            k = (k - key) % 26  
             pesan = pesan + abjad[k]
         else:
             pesan = pesan + i
